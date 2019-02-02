@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" >
+    
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <script>
+      var sidebarOpen = true;
+      var sidebarSelected = 'home';
+      var sidebarItems = [
+        {id:'home', icon:"fa fa-fw fa-home", type:'link',link:'/', text:'Home'},
+        {id:'node', icon:"fab fa-node-js", type:'text', text:'Node', items:[
+            {id:'library', type:'link', text:'Library', summary:'Express-Node on Heroku-Mongose',link:'https://serene-everglades-58870.herokuapp.com/catalog', target:'_blank'},
+            {id:'sppointments', type:'link', text:'Appointments', summary:'React-Node',link:'/appointments/'}
+        ]},
+        {id:'react', icon:"fab fa-react", type:'text', text:'React', items:[
+            {id:'todos', type:'link', text:'Todos', summary:'React app', link:'/todos/'},
+            {id:'multipage', type:'link', text:'React-Redux-Multipage', link:'/react-redux/'},
+            {id:'marioplan', type:'link', text:'Marioplan', summary:'React-Redux-Firebase +cloud functions',link:'https://marioplan-45ff3.firebaseapp.com/', target:'_blank'},
+        ]}
+    ];
+  </script>
+    <div id="sidebarReact"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  
+</html>
